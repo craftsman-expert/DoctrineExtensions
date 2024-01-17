@@ -64,7 +64,7 @@ class NestedTreeRepository extends AbstractTreeRepository
      *
      * @return mixed TreeNestedRepository if persistAs* is called
      */
-    public function __call($method, $args)
+    public function __call(string $method, array $args)
     {
         if ('persistAs' === substr($method, 0, 9)) {
             if (!isset($args[0])) {
